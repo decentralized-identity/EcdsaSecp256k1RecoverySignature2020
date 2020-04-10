@@ -1,16 +1,16 @@
-#### [View on GitHub](https://github.com/transmute-industries/lds-gpg2020)
+#### [View on GitHub](https://github.com/decentralized-identity/EcdsaSecp256k1RecoverySignature2020)
 
 > JSON-LD 1.1 is being formally specified in the W3C JSON-LD Working Group. To participate in this work, please join the W3C and then [join the Working Group](https://www.w3.org/2018/json-ld-wg/).
 
-- [Latest JSON-LD Context](https://gpg.jsld.org/contexts/lds-gpg2020-v0.0.jsonld)
+- [Latest JSON-LD Context](https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld)
 
 ### Suite Details
 
-Per [ld-signatures](https://w3c-dvcg.github.io/ld-signatures/#signature-suites), this Signature Suite defines the following:
+Per [ld-signatures](https://w3c-ccg.github.io/ld-signatures/#signature-suites), this Signature Suite defines the following:
 
 ```json
 {
-  "id": "https://identity.foundation/contexts/#EcdsaSecp256k1RecoverySignature2020",
+  "id": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoverySignature2020",
   "type": "SignatureSuite",
   "canonicalizationAlgorithm": "https://w3id.org/security#URDNA2015",
   "digestAlgorithm": "https://www.ietf.org/assignments/jwa-parameters#SHA256",
