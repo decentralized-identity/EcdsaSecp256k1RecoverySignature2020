@@ -99,3 +99,38 @@ A hex encoded ethereumAddress address.
   "ethereumAddress": "0x89a932207c485f85226d86f7cd486a89a24fcc12"
 }
 ```
+
+<h4 id="ES256K-R"><a href="#ES256K-R">ES256K-R</a></h4>
+
+This suite uses detached JWS using alg "ES256K-R" an unregistered, experimental ECDSA over secp256k1 with encoded recovery bit. Please review the details below.
+
+- [Detached JWS RFC 7515](https://tools.ietf.org/html/rfc7515#appendix-F)
+- [ES256-K](https://tools.ietf.org/html/draft-ietf-cose-webauthn-algorithms-04#section-3.2)
+
+ES256K-R is just ES256K with the recovery bit appended... making the signature 65 bytes instead of 64.
+
+The recovery bit is used to extract the public key from the signature. See [here](https://github.com/bitjson/bitcoin-ts/blob/90848d9/src/lib/crypto/secp256k1-types.ts#L220).
+
+^ please recommend a better source for describing ecdsa secp256k1 recoverable signature format.
+
+The detached JWS must have the following header:
+
+```json
+{
+  "alg": "ES256K-R",
+  "b64": false,
+  "crit": ["b64"]
+}
+```
+
+This is what a proof with `EcdsaSecp256k1RecoverySignature2020` looks like:
+
+```json
+{
+  "type": "EcdsaSecp256k1RecoverySignature2020",
+  "created": "2020-04-11T21:07:06Z",
+  "verificationMethod": "did:example:123#vm-3",
+  "proofPurpose": "assertionMethod",
+  "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..pp9eiLCMfN4EfSB3cbl3UxJ4TtgUaTfByDaaB6IZbXsnvIy5AUIFjbgaiFNtq9-3f8mP7foD_HXpjrdWZfzlwAE"
+}
+```
