@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>Home - JSON-LD Signature Suite for JWS</title>
+    
+    <meta name="description" content="Linked Data Signatures for JWS Developers." />
+    
+        <meta name="keywords" content="jsonld,jose,jws,jwk,jwks,jwa,linked-data,rdf,graph,signature" />
+        <meta name="keyword" content="jsonld,jose,jws,jwk,jwks,jwa,linked-data,rdf,graph,signature" />
+    
+    
+    
+    <meta property="og:title" content="Linked Data Signatures for JWS"/>
+    <meta property="og:type" content="documentation"/>
+    <meta property="og:image" content="http://lds.jsld.org/image.jpg"/>
+    <meta property="og:site_name" content="JSON-LD Signature Suite for JWS"/>
+    <meta property="og:url" content="http://lds.jsld.org"/>
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    <input type="text" id="nav-search" placeholder="Search" />
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="EcdsaSecp256k1RecoveryMethod2020.html">EcdsaSecp256k1RecoveryMethod2020</a><ul class='methods'><li data-type='method'><a href="EcdsaSecp256k1RecoveryMethod2020.html#addEncodedPublicKey">addEncodedPublicKey</a></li><li data-type='method'><a href="EcdsaSecp256k1RecoveryMethod2020.html#publicNode">publicNode</a></li><li data-type='method'><a href="EcdsaSecp256k1RecoveryMethod2020.html#signer">signer</a></li><li data-type='method'><a href="EcdsaSecp256k1RecoveryMethod2020.html#verifier">verifier</a></li></ul></li><li><a href="EcdsaSecp256k1RecoverySignature2020.html">EcdsaSecp256k1RecoverySignature2020</a><ul class='methods'><li data-type='method'><a href="EcdsaSecp256k1RecoverySignature2020.html#sign">sign</a></li><li data-type='method'><a href="EcdsaSecp256k1RecoverySignature2020.html#verifySignature">verifySignature</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#signDetached">signDetached</a></li></ul>
+</nav>
+
+<div id="main">
+    
+
+    
+
+
+
+    
+
+
+    <section class="package">
+        <h3> </h3>		
+    </section>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+    <section class="readme usertext">
+        <article><h4><a href="https://github.com/decentralized-identity/EcdsaSecp256k1RecoverySignature2020">View on GitHub</a></h4>
+<blockquote>
+<p>JSON-LD 1.1 is being formally specified in the W3C JSON-LD Working Group. To participate in this work, please join the W3C and then <a href="https://www.w3.org/2018/json-ld-wg/">join the Working Group</a>.</p>
+</blockquote>
+<ul>
+<li><a href="https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld">Latest JSON-LD Context</a></li>
+</ul>
+<h3>Suite Details</h3>
+<p>Per <a href="https://w3c-ccg.github.io/ld-signatures/#signature-suites">ld-signatures</a>, this Signature Suite defines the following:</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoverySignature2020&quot;,
+  &quot;type&quot;: &quot;SignatureSuite&quot;,
+  &quot;canonicalizationAlgorithm&quot;: &quot;https://w3id.org/security#URDNA2015&quot;,
+  &quot;digestAlgorithm&quot;: &quot;https://www.ietf.org/assignments/jwa-parameters#SHA256&quot;,
+  &quot;signatureAlgorithm&quot;: &quot;https://tools.ietf.org/html/rfc4880#section-11.4&quot;
+}
+</code></pre>
+<h2>Examples</h2>
+<ul>
+<li><a href="./docs/unlockedDID.json">Signed DID Document</a></li>
+<li><a href="./docs/verifiableCredential.json">Signed Credential</a></li>
+</ul>
+<h3>Terminology</h3>
+<h4 id="publicKeyJwk"><a href="#publicKeyJwk">publicKeyJwk</a></h4>
+<p>A jwk secp256k1 public key.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;did:example:123#vm-1&quot;,
+  &quot;controller&quot;: &quot;did:example:123&quot;,
+  &quot;type&quot;: &quot;EcdsaSecp256k1RecoveryMethod2020&quot;,
+  &quot;publicKeyJwk&quot;: {
+    &quot;crv&quot;: &quot;secp256k1&quot;,
+    &quot;kid&quot;: &quot;JUvpllMEYUZ2joO59UNui_XYDqxVqiFLLAJ8klWuPBw&quot;,
+    &quot;kty&quot;: &quot;EC&quot;,
+    &quot;x&quot;: &quot;dWCvM4fTdeM0KmloF57zxtBPXTOythHPMm1HCLrdd3A&quot;,
+    &quot;y&quot;: &quot;36uMVGM7hnw-N6GnjFcihWE3SkrhMLzzLCdPMXPEXlA&quot;
+  }
+}
+</code></pre>
+<h4 id="privateKeyJwk"><a href="#privateKeyJwk">privateKeyJwk</a></h4>
+<p>A jwk secp256k1 private key.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;did:example:123#vm-1&quot;,
+  &quot;controller&quot;: &quot;did:example:123&quot;,
+  &quot;type&quot;: &quot;EcdsaSecp256k1RecoveryMethod2020&quot;,
+  &quot;privateKeyJwk&quot;: {
+    &quot;crv&quot;: &quot;secp256k1&quot;,
+    &quot;d&quot;: &quot;rhYFsBPF9q3-uZThy7B3c4LDF_8wnozFUAEm5LLC4Zw&quot;,
+    &quot;kid&quot;: &quot;JUvpllMEYUZ2joO59UNui_XYDqxVqiFLLAJ8klWuPBw&quot;,
+    &quot;kty&quot;: &quot;EC&quot;,
+    &quot;x&quot;: &quot;dWCvM4fTdeM0KmloF57zxtBPXTOythHPMm1HCLrdd3A&quot;,
+    &quot;y&quot;: &quot;36uMVGM7hnw-N6GnjFcihWE3SkrhMLzzLCdPMXPEXlA&quot;
+  }
+}
+</code></pre>
+<h4 id="publicKeyHex"><a href="#publicKeyHex">publicKeyHex</a></h4>
+<p>A hex encoded secp256k1 compressed public key.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;did:example:123#key-0&quot;,
+  &quot;type&quot;: &quot;EcdsaSecp256k1RecoverySignature2020&quot;,
+  &quot;publicKeyHex&quot;: &quot;027560af3387d375e3342a6968179ef3c6d04f5d33b2b611cf326d4708badd7770&quot;
+}
+</code></pre>
+<h4 id="privateKeyHex"><a href="#privateKeyHex">privateKeyHex</a></h4>
+<p>A hex encoded secp256k1 compressed private key.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;did:example:123#key-0&quot;,
+  &quot;type&quot;: &quot;EcdsaSecp256k1RecoverySignature2020&quot;,
+  &quot;publicKeyHex&quot;: &quot;278a5de700e29faae8e40e366ec5012b5ec63d36ec77e8a2417154cc1d25383f&quot;
+}
+</code></pre>
+<h4 id="ethereumAddress"><a href="#ethereumAddress">ethereumAddress</a></h4>
+<p>A hex encoded ethereumAddress address.</p>
+<pre class="prettyprint source lang-json"><code>{
+  &quot;id&quot;: &quot;did:example:123#key-0&quot;,
+  &quot;type&quot;: &quot;EcdsaSecp256k1RecoverySignature2020&quot;,
+  &quot;ethereumAddress&quot;: &quot;0x89a932207c485f85226d86f7cd486a89a24fcc12&quot;
+}
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.4</a> on Sat Apr 11 2020 16:12:46 GMT-0500 (Central Daylight Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+<script src="scripts/search.js" defer></script>
+
+
+
+</body>
+</html>
