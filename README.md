@@ -20,8 +20,8 @@ Per [ld-signatures](https://w3c-ccg.github.io/ld-signatures/#signature-suites), 
 
 ## Examples
 
-- [Signed DID Document](./docs/unlockedDID.json)
-- [Signed Credential](./docs/verifiableCredential.json)
+- [Signed DID Document](https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/docs/unlockedDID.json)
+- [Signed Credential](https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/docs/verifiableCredential.json)
 
 ### Terminology
 
