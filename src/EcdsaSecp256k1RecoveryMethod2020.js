@@ -9,7 +9,9 @@ class EcdsaSecp256k1RecoveryMethod2020 {
    * @param {string} options.controller - The key controller.
    * @param {string} options.publicKeyJwk - The JWK encoded Public Key.
    * @param {string} options.privateKeyJwk - The JWK Private Key.
-   * @param {string} options.alg - The JWS alg for this key.
+   * @param {string} options.publicKeyHex - The hex encoded compressed Public Key.
+   * @param {string} options.privateKeyHex - The hex encoded compressed Private Key.
+   * @param {string} options.ethereumAddress - The checksum encoded Ethereum Address.
    */
   constructor(options = {}) {
     Object.keys(options).forEach((k) => {
@@ -23,21 +25,31 @@ class EcdsaSecp256k1RecoveryMethod2020 {
   }
 
   /**
-   * Returns the JWK encoded public key.
+   * Returns the public key.
    *
-   * @returns {string} The JWK encoded public key.
+   * @returns {string | object} The public key.
    */
   get publicKey() {
-    return this.publicKeyJwk;
+    if (this.publicKeyJwk) {
+      return this.publicKeyJwk;
+    }
+    if (this.publicKeyHex) {
+      return this.publicKeyHex;
+    }
   }
 
   /**
-   * Returns the JWK encoded private key.
+   * Returns a private key.
    *
-   * @returns {string} The JWK encoded private key.
+   * @returns {string | object} The private key.
    */
   get privateKey() {
-    return this.privateKeyJwk;
+    if (this.privateKeyJwk) {
+      return this.privateKeyJwk;
+    }
+    if (this.privateKeyHex) {
+      return this.privateKeyHex;
+    }
   }
 
   /**

@@ -7,7 +7,6 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
    * @param linkedDataSigantureType {string} The name of the signature suite.
    * @param linkedDataSignatureVerificationKeyType {string} The name verification key type for the signature suite.
    *
-   * @param alg {string} JWS alg provided by subclass.
    * @param [LDKeyClass] {LDKeyClass} provided by subclass or subclass
    *   overrides `getVerificationMethod`.
    *
