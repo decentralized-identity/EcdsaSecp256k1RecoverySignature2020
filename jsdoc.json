@@ -27,16 +27,16 @@
     "disqus": "", // Shortname for your disqus (subdomain during site creation)
     "openGraph": {
       // Open Graph options (mostly for Facebook and other sites to easily extract meta information)
-      "title": "Linked Data Signatures for JWS", // Title of the website
+      "title": "ES256K-R JSON-LD Signature Suite ", // Title of the website
       "type": "documentation", // Type of the website
-      "image": "http://lds.jsld.org/image.jpg", // Main image/logo
-      "site_name": "JSON-LD Signature Suite for JWS", // Site name
+      // "image": "http://lds.jsld.org/image.jpg", // Main image/logo
+      "site_name": "ES256K-R  JSON-LD Signature Suite ", // Site name
       "url": "http://lds.jsld.org" // Main canonical URL for the main page of the site
     },
     "meta": {
       // Meta information options (mostly for search engines that have not indexed your site yet)
-      "title": "JSON-LD Signature Suite for JWS", // Also will be used as postfix to actualy page title, prefixed with object/document name
-      "description": "Linked Data Signatures for JWS Developers.", // Description of overal contents of your website
+      "title": "ES256K-R  JSON-LD Signature Suite ", // Also will be used as postfix to actualy page title, prefixed with object/document name
+      "description": "ES256K-R JSON-LD Signature Suite  Developers.", // Description of overal contents of your website
       "keyword": "jsonld,jose,jws,jwk,jwks,jwa,linked-data,rdf,graph,signature" // Keywords for search engines
     },
     "search": [true]

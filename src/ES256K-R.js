@@ -260,6 +260,12 @@ const verifyDetached = async (
 };
 
 module.exports = {
+  publicJWKFromPublicKeyHex,
+  privateJWKFromPrivateKeyHex,
+  privateKeyHexFromJWK,
+  publicKeyHexFromJWK,
+  privateKeyUInt8ArrayFromJWK,
+  publicKeyUInt8ArrayFromJWK,
   signDetached,
   verifyDetached,
 };

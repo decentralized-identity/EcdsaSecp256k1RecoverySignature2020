@@ -1,7 +1,7 @@
 {
-  "name": "lds-ecdsa-secp256k1-recovery2020",
-  "version": "0.0.0",
-  "description": "Linked Data Signatures for JWS",
+  "name": "@transmute/lds-ecdsa-secp256k1-recovery2020",
+  "version": "0.0.1",
+  "description": "ES256K-R JSON-LD Signature Suite ",
   "homepage": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020",
   "main": "./src/index.js",
   "scripts": {
