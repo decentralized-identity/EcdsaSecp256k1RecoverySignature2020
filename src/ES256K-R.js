@@ -268,4 +268,5 @@ module.exports = {
   publicKeyUInt8ArrayFromJWK,
   signDetached,
   verifyDetached,
+  publicKeyToEthereumAddress: publicKeyToAddress,
 };
