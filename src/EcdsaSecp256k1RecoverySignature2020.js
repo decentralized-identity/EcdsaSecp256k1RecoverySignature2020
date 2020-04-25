@@ -2,6 +2,8 @@ const {
   suites: { LinkedDataSignature },
 } = require("jsonld-signatures");
 
+const jsonld = require("jsonld");
+
 class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
   /**
    * @param linkedDataSigantureType {string} The name of the signature suite.

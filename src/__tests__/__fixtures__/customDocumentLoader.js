@@ -29,7 +29,7 @@ const customLoader = (url) => {
     };
   }
 
-  if (url === "did:example:123") {
+  if (url.split("#")[0] === "did:example:123") {
     return {
       contextUrl: null, // this is for a context via a link header
       document: require("../../../docs/unlockedDID.json"), // this is the actual document that was loaded
