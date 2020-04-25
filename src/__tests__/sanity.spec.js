@@ -1,5 +1,4 @@
 const jsigs = require("jsonld-signatures");
-const vcjs = require("vc-js");
 const { AssertionProofPurpose } = jsigs.purposes;
 const EcdsaSecp256k1RecoveryMethod2020 = require("../EcdsaSecp256k1RecoveryMethod2020");
 const EcdsaSecp256k1RecoverySignature2020 = require("../EcdsaSecp256k1RecoverySignature2020");
@@ -24,17 +23,10 @@ const { documentLoader } = require("./__fixtures__");
 let vm1 = new EcdsaSecp256k1RecoveryMethod2020(unclockedDID.publicKey[0]);
 
 let suiteWithKey = new EcdsaSecp256k1RecoverySignature2020({
-  LDKeyClass: EcdsaSecp256k1RecoveryMethod2020,
-  linkedDataSigantureType: "EcdsaSecp256k1RecoverySignature2020",
-  linkedDataSignatureVerificationKeyType: "EcdsaSecp256k1RecoveryMethod2020",
   key: vm1,
 });
 
-let suiteWithoutKey = new EcdsaSecp256k1RecoverySignature2020({
-  LDKeyClass: EcdsaSecp256k1RecoveryMethod2020,
-  linkedDataSigantureType: "EcdsaSecp256k1RecoverySignature2020",
-  linkedDataSignatureVerificationKeyType: "EcdsaSecp256k1RecoveryMethod2020",
-});
+let suiteWithoutKey = new EcdsaSecp256k1RecoverySignature2020({});
 
 describe("sanity", () => {
   it("can sign and verify", async () => {
@@ -49,9 +41,8 @@ describe("sanity", () => {
       compactProof: false,
       documentLoader: documentLoader,
       purpose: new AssertionProofPurpose(),
-      suite: suiteWithKey,
+      suite: suiteWithoutKey,
     });
-    console.log(result);
     expect(result.verified).toBeTruthy();
   });
 });

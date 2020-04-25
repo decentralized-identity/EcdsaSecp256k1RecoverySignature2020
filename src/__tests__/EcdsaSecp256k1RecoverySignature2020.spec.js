@@ -14,10 +14,6 @@ describe("EcdsaSecp256k1RecoverySignature2020", () => {
     describe(vm.id, () => {
       let vm1 = new EcdsaSecp256k1RecoveryMethod2020(vm);
       let suite = new EcdsaSecp256k1RecoverySignature2020({
-        LDKeyClass: EcdsaSecp256k1RecoveryMethod2020,
-        linkedDataSigantureType: "EcdsaSecp256k1RecoverySignature2020",
-        linkedDataSignatureVerificationKeyType:
-          "EcdsaSecp256k1RecoveryMethod2020",
         key: vm1,
       });
 

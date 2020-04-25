@@ -4,6 +4,8 @@ const {
 
 const jsonld = require("jsonld");
 
+const LDKeyClass = require("./EcdsaSecp256k1RecoveryMethod2020");
+
 class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
   /**
    * @param linkedDataSigantureType {string} The name of the signature suite.
@@ -24,10 +26,7 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
    *   algorithm.
    */
   constructor({
-    linkedDataSigantureType,
-    linkedDataSignatureVerificationKeyType,
     alg,
-    LDKeyClass,
     signer,
     key,
     proofSignatureKey,
@@ -35,16 +34,14 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
     useNativeCanonize,
   } = {}) {
     super({
-      type: linkedDataSigantureType,
+      type: "EcdsaSecp256k1RecoverySignature2020",
       LDKeyClass,
       alg,
       date,
       useNativeCanonize,
     });
-    this.alg = alg;
-    this.LDKeyClass = LDKeyClass;
     this.signer = signer;
-    this.requiredKeyType = linkedDataSignatureVerificationKeyType;
+    this.LDKeyClass = LDKeyClass;
     this.proofSignatureKey = proofSignatureKey || "jws";
 
     if (key) {
@@ -102,9 +99,15 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
   }
 
   async assertVerificationMethod({ verificationMethod }) {
-    if (!jsonld.hasValue(verificationMethod, "type", this.requiredKeyType)) {
+    if (
+      !jsonld.hasValue(
+        verificationMethod,
+        "type",
+        "EcdsaSecp256k1RecoveryMethod2020"
+      )
+    ) {
       throw new Error(
-        `Invalid key type. Key type must be "${this.requiredKeyType}".`
+        `Invalid key type. Key type must be "EcdsaSecp256k1RecoveryMethod2020".`
       );
     }
   }
@@ -113,11 +116,26 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
     if (this.key) {
       return this.key.publicNode();
     }
-
-    const verificationMethod = await super.getVerificationMethod({
-      proof,
-      documentLoader,
-    });
+    // replaces:
+    // const verificationMethod = await super.getVerificationMethod({
+    //   proof,
+    //   documentLoader,
+    // });
+    // Because hard coding security contexts prevents extension using base class
+    // https://github.com/digitalbazaar/jsonld-signatures/blob/master/lib/suites/LinkedDataSignature.js#L233
+    let controller = (await documentLoader(proof.verificationMethod)).document;
+    const verificationMethod = await jsonld.frame(
+      controller,
+      {
+        "@context": [
+          "https://w3id.org/security/v2",
+          "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld",
+        ],
+        "@embed": "@always",
+        id: proof.verificationMethod,
+      },
+      { documentLoader, compactToRelative: false }
+    );
     await this.assertVerificationMethod({ verificationMethod });
     return verificationMethod;
   }
