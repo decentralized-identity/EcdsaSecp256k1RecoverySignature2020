@@ -148,8 +148,7 @@ function joseSignerFactory(vm) {
         b64: false,
         crit: ["b64"],
       };
-      toBeSigned = Buffer.from(data.buffer, data.byteOffset, data.length);
-
+      const toBeSigned = Buffer.from(data.buffer, data.byteOffset, data.length);
       return ES256KR.signDetached(toBeSigned, vm, header);
     },
   };
