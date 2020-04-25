@@ -1,4 +1,3 @@
-const jose = require("jose");
 const base64url = require("base64url");
 const ES256KR = require("./ES256K-R");
 
