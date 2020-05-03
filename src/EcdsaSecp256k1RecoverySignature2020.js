@@ -87,7 +87,6 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
    */
   async verifySignature({ verifyData, verificationMethod, proof }) {
     let { verifier } = this;
-
     if (!verifier) {
       const key = await this.LDKeyClass.from(verificationMethod);
       verifier = key.verifier(key, this.alg, this.type);

@@ -165,9 +165,13 @@ function joseSignerFactory(vm) {
  * to the key passed in.
  */
 joseVerifierFactory = (vm) => {
-  if (!vm.publicKeyJwk && !vm.publicKeyHex && !vm.ethereumAddress) {
+  if (
+    vm.publicKeyJwk === undefined &&
+    vm.publicKeyHex === undefined &&
+    vm.ethereumAddress === undefined
+  ) {
     return {
-      async sign() {
+      async verify() {
         throw new Error("No vm to verify with.");
       },
     };
