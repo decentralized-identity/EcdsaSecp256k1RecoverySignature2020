@@ -17,6 +17,17 @@ describe("EcdsaSecp256k1RecoverySignature2020", () => {
         key: vm1,
       });
 
+      const canonizeProof = suite.canonizeProof
+      suite.canonizeProof = async function(proof, opts) {
+        proof['@context'] = [
+          'https://w3id.org/security/v2',
+          {
+            "EcdsaSecp256k1RecoverySignature2020": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#EcdsaSecp256k1RecoverySignature2020"
+          }
+        ];
+        return await canonizeProof.call(this, proof, opts)
+      }
+
       describe("jsigs", () => {
         it("should work as valid signature suite for signing and verifying a document", async () => {
           // We need to do that because jsigs.sign modifies the credential... no bueno
