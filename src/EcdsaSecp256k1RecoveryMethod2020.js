@@ -11,6 +11,7 @@ class EcdsaSecp256k1RecoveryMethod2020 {
    * @param {string} options.publicKeyHex - The hex encoded compressed Public Key.
    * @param {string} options.privateKeyHex - The hex encoded compressed Private Key.
    * @param {string} options.ethereumAddress - The checksum encoded Ethereum Address.
+   * @param {string} options.blockchainAccountId - The checksum encoded Blockchain Account ID.
    */
   constructor(options = {}) {
     Object.keys(options).forEach((k) => {
@@ -79,6 +80,8 @@ class EcdsaSecp256k1RecoveryMethod2020 {
    *   jsonld-signatures.
    * @param {string} publicKeyNode.ethereumAddress - ethereumAddress for
    *   jsonld-signatures.
+   * @param {string} publicKeyNode.blockchainAccountId - blockchainAccountId for
+   *   jsonld-signatures.
    *
    * @returns {Object} A PublicKeyNode in a block.
    */
@@ -91,6 +94,9 @@ class EcdsaSecp256k1RecoveryMethod2020 {
     }
     if (this.ethereumAddress) {
       publicKeyNode.ethereumAddress = this.ethereumAddress;
+    }
+    if (this.blockchainAccountId) {
+      publicKeyNode.blockchainAccountId = this.blockchainAccountId;
     }
     return publicKeyNode;
   }
@@ -168,6 +174,7 @@ joseVerifierFactory = (vm) => {
   if (
     vm.publicKeyJwk === undefined &&
     vm.publicKeyHex === undefined &&
+    vm.blockchainAccountId === undefined &&
     vm.ethereumAddress === undefined
   ) {
     return {

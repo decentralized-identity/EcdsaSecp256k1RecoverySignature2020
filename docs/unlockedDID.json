@@ -1,7 +1,10 @@
 {
   "@context": [
     "https://www.w3.org/ns/did/v1",
-    "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld"
+    "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld",
+    {
+      "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+    }
   ],
   "id": "did:example:123",
   "publicKey": [
@@ -38,27 +41,38 @@
       "type": "EcdsaSecp256k1RecoveryMethod2020",
       "ethereumAddress": "0xF3beAC30C498D9E26865F34fCAa57dBB935b0D74",
       "privateKeyHex": "278a5de700e29faae8e40e366ec5012b5ec63d36ec77e8a2417154cc1d25383f"
+    },
+    {
+      "id": "did:example:123#vm-4",
+      "controller": "did:example:123",
+      "type": "EcdsaSecp256k1RecoveryMethod2020",
+      "blockchainAccountId": "eip155:1:0xa136D6b820E41858b57b0136514e75f4174ceA5f",
+      "privateKeyHex": "0b622f72d0cb4f6d7eebfb9d97375aec891c9836fcf813310069cfffdc7811d6"
     }
   ],
   "authentication": [
     "did:example:123#vm-1",
     "did:example:123#vm-2",
-    "did:example:123#vm-3"
+    "did:example:123#vm-3",
+    "did:example:123#vm-4"
   ],
   "assertionMethod": [
     "did:example:123#vm-1",
     "did:example:123#vm-2",
-    "did:example:123#vm-3"
+    "did:example:123#vm-3",
+    "did:example:123#vm-4"
   ],
   "capabilityDelegation": [
     "did:example:123#vm-1",
     "did:example:123#vm-2",
-    "did:example:123#vm-3"
+    "did:example:123#vm-3",
+    "did:example:123#vm-4"
   ],
   "capabilityInvocation": [
     "did:example:123#vm-1",
     "did:example:123#vm-2",
-    "did:example:123#vm-3"
+    "did:example:123#vm-3",
+    "did:example:123#vm-4"
   ],
   "proof": [
     {
@@ -81,6 +95,13 @@
       "verificationMethod": "did:example:123#vm-3",
       "proofPurpose": "assertionMethod",
       "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Q4jeDY1AYhT8i7U4IOJEoTR9KSAlhvg-Od9YroJDLNwNPlj2zSi7U4BDgJR7Or4jmZPRCYZqTGKDK4Dhv2YSMwE"
+    },
+    {
+      "type": "EcdsaSecp256k1RecoverySignature2020",
+      "created": "2021-11-19T00:45:45Z",
+      "verificationMethod": "did:example:123#vm-4",
+      "proofPurpose": "assertionMethod",
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..NBzPQ52Jz4-h7X7wCjKTtpdLU_3kz-zeGRLu6m_LoUg5zieFhna78Iu-bhC3lTD6hILqWDFMUH4rRLaVhBlLkQE"
     }
   ]
 }

@@ -73,4 +73,21 @@ describe("ES256K-R", () => {
     const result = await verifyDetached(detached, payload, vm);
     expect(result).toBe(true);
   });
+
+  it("blockchainAccountId: sign & verify", async () => {
+    const privateKeyHex =
+      "0b622f72d0cb4f6d7eebfb9d97375aec891c9836fcf813310069cfffdc7811d6";
+    const blockchainAccountId = "eip155:1:0xa136D6b820E41858b57b0136514e75f4174ceA5f";
+    const vm = {
+      id: "did:example:123#vm-4",
+      controller: "did:example:123",
+      blockchainAccountId,
+      privateKeyHex,
+    };
+    // console.log(JSON.stringify(vm, null, 2));
+
+    const detached = await signDetached(payload, vm, header);
+    const result = await verifyDetached(detached, payload, vm);
+    expect(result).toBe(true);
+  });
 });
