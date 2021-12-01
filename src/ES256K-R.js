@@ -256,6 +256,16 @@ const verifyDetached = async (
   ) {
     return true;
   }
+
+  if (vm.blockchainAccountId) {
+    const [chainNamespace, chainReference, accountAddress] = vm.blockchainAccountId.split(":");
+    if (chainNamespace === 'eip155') {
+      if (accountAddress === computedRecoveredEthereumAddress) {
+        return true;
+      }
+    }
+  }
+
   throw new Error("Cannot verify detached signature.");
 };
 

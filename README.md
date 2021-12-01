@@ -100,6 +100,18 @@ A hex encoded ethereumAddress address.
 }
 ```
 
+<h4 id="blockchainAccountId"><a href="#blockchainAccountId">blockchainAccountId</a></h4>
+
+A [blockchain account ID](https://w3c-ccg.github.io/security-vocab/#blockchainAccountId) according to [CAIP-10](https://github.com/ChainAgnostic/CAIPs/blob/master/CAIPs/caip-10.md).
+
+```json
+{
+  "id": "did:example:123#key-0",
+  "type": "EcdsaSecp256k1RecoverySignature2020",
+  "blockchainAccountId": "eip155:1:0x89a932207c485f85226d86f7cd486a89a24fcc12"
+}
+```
+
 <h4 id="ES256K-R"><a href="#ES256K-R">ES256K-R</a></h4>
 
 This suite uses detached JWS using alg "ES256K-R" an unregistered, experimental ECDSA over secp256k1 with encoded recovery bit. Please review the details below.
