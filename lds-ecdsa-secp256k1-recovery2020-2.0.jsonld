@@ -18,7 +18,7 @@
           "@id": "https://w3id.org/security#controller",
           "@type": "@id"
         },
-        "blockchainAccountId": "https://w3id.org/security#blockchainAccountId"
+        "blockchainAccountId": "https://w3id.org/security#blockchainAccountId",
         "publicKeyJwk": {
           "@id": "https://w3id.org/security#publicKeyJwk",
           "@type": "@json"
