@@ -20,7 +20,7 @@ const doc = {
 const unclockedDID = require("../../docs/unlockedDID.json");
 
 const { documentLoader } = require("./__fixtures__");
-let vm1 = new EcdsaSecp256k1RecoveryMethod2020(unclockedDID.publicKey[0]);
+let vm1 = new EcdsaSecp256k1RecoveryMethod2020(unclockedDID.verificationMethod[0]);
 
 let suiteWithKey = new EcdsaSecp256k1RecoverySignature2020({
   key: vm1,

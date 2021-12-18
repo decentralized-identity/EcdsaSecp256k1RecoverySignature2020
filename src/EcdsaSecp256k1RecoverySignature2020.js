@@ -128,7 +128,7 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
       {
         "@context": [
           "https://w3id.org/security/v2",
-          "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld",
+          "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
         ],
         "@embed": "@always",
         id: proof.verificationMethod,

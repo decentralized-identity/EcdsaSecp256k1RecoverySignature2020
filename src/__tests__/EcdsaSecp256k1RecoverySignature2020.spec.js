@@ -17,7 +17,7 @@ const { documentLoader } = require("./__fixtures__");
 const regenerate = !!process.env.REGENERATE_TEST_VECTORS;
 
 describe("EcdsaSecp256k1RecoverySignature2020", () => {
-  unclockedDID.publicKey.forEach((vm) => {
+  unclockedDID.verificationMethod.forEach((vm) => {
     describe(vm.id, () => {
       let vm1 = new EcdsaSecp256k1RecoveryMethod2020(vm);
       let suite = new EcdsaSecp256k1RecoverySignature2020({

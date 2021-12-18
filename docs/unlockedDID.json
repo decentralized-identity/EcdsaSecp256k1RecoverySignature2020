@@ -1,28 +1,20 @@
 {
   "@context": [
     "https://www.w3.org/ns/did/v1",
-    "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020/lds-ecdsa-secp256k1-recovery2020-0.0.jsonld",
+    "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
     {
-      "blockchainAccountId": "https://w3id.org/security#blockchainAccountId",
-      "publicKey": "https://w3id.org/security#publicKey",
-      "proof": {
-        "@id": "https://w3id.org/security#proof",
-        "@type": "@id",
-        "@container": "@graph"
+      "esrs2020": "https://identity.foundation/EcdsaSecp256k1RecoverySignature2020#",
+      "privateKeyJwk": {
+        "@id": "esrs2020:privateKeyJwk",
+        "@type": "@json"
       },
-      "jws": "https://w3id.org/security#jws",
-      "created": {
-        "@id": "http://purl.org/dc/terms/created",
-        "@type": "http://www.w3.org/2001/XMLSchema#dateTime"
-      },
-      "proofPurpose": {
-        "@id": "https://w3id.org/security#proofPurpose",
-        "@type": "@vocab"
-      }
+      "publicKeyHex": "esrs2020:publicKeyHex",
+      "privateKeyHex": "esrs2020:privateKeyHex",
+      "ethereumAddress": "esrs2020:ethereumAddress"
     }
   ],
   "id": "did:example:123",
-  "publicKey": [
+  "verificationMethod": [
     {
       "id": "did:example:123#vm-1",
       "controller": "did:example:123",
@@ -92,31 +84,31 @@
   "proof": [
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2021-12-17T22:55:07Z",
+      "created": "2021-12-18T00:15:50Z",
       "verificationMethod": "did:example:123#vm-1",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..5VDDwjztlg0NZFEV9BcYC75nA0-ejorerkL8JnSkdi1cVa5cE-Rzz4IPGbiYFgxhwdaDk-y9qg0mMR8--1n_jwE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..wqa2of4I6YAD6nVFWE_FO2j520M4qxIGQNo11XAoI5BJs4oK_rvvVlaCkYUbALnr7L4XclV6E2aRV2ZnTo7QhwA"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2021-12-17T22:55:07Z",
+      "created": "2021-12-18T00:15:50Z",
       "verificationMethod": "did:example:123#vm-2",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..75PnJNBnL21kivslsttIf3sGBP9egwa7WUvP5D3lx1gXVcN4WMEmB2L3PowMtz3Oa770anEfvdCGcyzQboOXYAE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..3fgzVkmRYVtv-1gCOHULSEDvLDca5-8U_4KP7ZPLS2UrHXq35IR4L9X4BgXuCSj3Z5Rl8iCLjgl4RR20ulqa_QA"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2021-12-17T22:55:07Z",
+      "created": "2021-12-18T00:15:50Z",
       "verificationMethod": "did:example:123#vm-3",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..9vz6SaITRvdqbkd_lM7yhJRnHqlGMpa6rKGHnoheIfAku8WLCQC9TJqZou1uu5367sxpfIcbXMCxR1Vuuvm-kQE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..MHJwfl-iADPjHP2XeP2bRVOg5sRckS7jHmE8rWH8c_MlEMc5S105eQZ_2FK0LkUoWbxO5F9Ohi8njd0ocB_b-gA"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2021-12-17T22:55:08Z",
+      "created": "2021-12-18T00:15:51Z",
       "verificationMethod": "did:example:123#vm-4",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..s_QsDI0c-ubQAbb_Ntgs8-aJGSWAQocHfIenjzIF-9NXgV5f8GXC-9OSU3TvNAY81kQxQbRQ4wlIae_xvTf9MAE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..o_Ir7DwYMkKV1hGhGUT6ie1q9DSBmIUDw_KTW229czwYWGtnpnFLK3Hq8UYGqcRxtAHnvy6OYmP5zLPGV6jlvQE"
     }
   ]
 }

@@ -4,7 +4,7 @@ const unclockedDID = require("../../docs/unlockedDID.json");
 const data = new Uint8Array([128]);
 
 describe("EcdsaSecp256k1RecoveryMethod2020", () => {
-  unclockedDID.publicKey.forEach((vm) => {
+  unclockedDID.verificationMethod.forEach((vm) => {
     describe(vm.id, () => {
       let vm1;
       let signature;
