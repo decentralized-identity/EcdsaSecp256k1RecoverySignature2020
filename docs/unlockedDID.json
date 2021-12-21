@@ -92,31 +92,31 @@
   "proof": [
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2020-04-11T21:04:54Z",
+      "created": "2021-12-17T22:55:07Z",
       "verificationMethod": "did:example:123#vm-1",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..FA2gQFudZLU4ZOi1f_T2YX5g_dB-KNVcvo19Vhu74t9XpDblDyt1X5-98H7ipe8ypWerxJojeMjnnoHfJ-A4lwA"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..5VDDwjztlg0NZFEV9BcYC75nA0-ejorerkL8JnSkdi1cVa5cE-Rzz4IPGbiYFgxhwdaDk-y9qg0mMR8--1n_jwE"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2020-04-11T21:04:54Z",
+      "created": "2021-12-17T22:55:07Z",
       "verificationMethod": "did:example:123#vm-2",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..jDnnvCPbA4_AT4MuWrfrdMMzGDtfymh1dQeCpsPKbFMLa0QPOCFS2PKG8YeTGrOmRBif9QYJoxleq0VBPmn9owA"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..75PnJNBnL21kivslsttIf3sGBP9egwa7WUvP5D3lx1gXVcN4WMEmB2L3PowMtz3Oa770anEfvdCGcyzQboOXYAE"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2020-04-11T21:04:54Z",
+      "created": "2021-12-17T22:55:07Z",
       "verificationMethod": "did:example:123#vm-3",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..Q4jeDY1AYhT8i7U4IOJEoTR9KSAlhvg-Od9YroJDLNwNPlj2zSi7U4BDgJR7Or4jmZPRCYZqTGKDK4Dhv2YSMwE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..9vz6SaITRvdqbkd_lM7yhJRnHqlGMpa6rKGHnoheIfAku8WLCQC9TJqZou1uu5367sxpfIcbXMCxR1Vuuvm-kQE"
     },
     {
       "type": "EcdsaSecp256k1RecoverySignature2020",
-      "created": "2021-11-19T00:45:45Z",
+      "created": "2021-12-17T22:55:08Z",
       "verificationMethod": "did:example:123#vm-4",
       "proofPurpose": "assertionMethod",
-      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..NBzPQ52Jz4-h7X7wCjKTtpdLU_3kz-zeGRLu6m_LoUg5zieFhna78Iu-bhC3lTD6hILqWDFMUH4rRLaVhBlLkQE"
+      "jws": "eyJhbGciOiJFUzI1NkstUiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..s_QsDI0c-ubQAbb_Ntgs8-aJGSWAQocHfIenjzIF-9NXgV5f8GXC-9OSU3TvNAY81kQxQbRQ4wlIae_xvTf9MAE"
     }
   ]
 }
