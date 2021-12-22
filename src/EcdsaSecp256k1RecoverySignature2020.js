@@ -35,6 +35,7 @@ class EcdsaSecp256k1RecoverySignature2020 extends LinkedDataSignature {
   } = {}) {
     super({
       type: "EcdsaSecp256k1RecoverySignature2020",
+      contextUrl: "https://w3id.org/security/suites/secp256k1recovery-2020/v2",
       LDKeyClass,
       alg,
       date,

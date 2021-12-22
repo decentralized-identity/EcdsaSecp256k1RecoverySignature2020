@@ -27,7 +27,7 @@
     "ethereum-public-key-to-address": "^0.0.5",
     "json-stringify-deterministic": "^1.0.1",
     "jsonld": "^5.2.0",
-    "jsonld-signatures": "~7.0.0"
+    "jsonld-signatures": "^9.3.1"
   },
   "devDependencies": {
     "docdash": "^1.1.1",
