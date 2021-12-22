@@ -76,7 +76,7 @@ describe("EcdsaSecp256k1RecoverySignature2020", () => {
           });
           expect(verifiableCredential.proof).toBeDefined();
 
-          const result = await vcjs.verify({
+          const result = await vcjs.verifyCredential({
             credential: verifiableCredential,
             compactProof: false,
             documentLoader: documentLoader,
@@ -87,7 +87,7 @@ describe("EcdsaSecp256k1RecoverySignature2020", () => {
 
           if (!regenerate) {
             // Verify static verifiable credential
-            const result1 = await vcjs.verify({
+            const result1 = await vcjs.verifyCredential({
               credential: staticVerifiableCredential,
               compactProof: false,
               documentLoader: documentLoader,
