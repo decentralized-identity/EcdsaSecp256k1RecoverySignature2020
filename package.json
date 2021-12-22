@@ -20,19 +20,19 @@
     "url": "https://github.com/decentralized-identity/EcdsaSecp256k1RecoverySignature2020/issues"
   },
   "dependencies": {
-    "@trust/keyto": "^0.3.7",
+    "@trust/keyto": "^1.0.1",
     "base64url": "^3.0.1",
     "bitcoin-ts": "^1.14.2",
-    "crypto-ld": "^3.7.0",
-    "ethereum-public-key-to-address": "0.0.2",
+    "crypto-ld": "^6.0.0",
+    "ethereum-public-key-to-address": "^0.0.5",
     "json-stringify-deterministic": "^1.0.1",
-    "jsonld": "^3.1.0",
-    "jsonld-signatures": "^5.0.1"
+    "jsonld": "^5.2.0",
+    "jsonld-signatures": "~7.0.0"
   },
   "devDependencies": {
     "docdash": "^1.1.1",
-    "jest": "^24.9.0",
+    "jest": "^27.4.5",
     "jsdoc": "^3.6.3",
-    "vc-js": "^0.3.0"
+    "vc-js": "^0.4.1"
   }
 }
