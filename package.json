@@ -30,9 +30,9 @@
     "jsonld-signatures": "^9.3.1"
   },
   "devDependencies": {
+    "@digitalbazaar/vc": "^2.1.0",
     "docdash": "^1.1.1",
     "jest": "^27.4.5",
-    "jsdoc": "^3.6.3",
-    "vc-js": "^0.6.4"
+    "jsdoc": "^3.6.3"
   }
 }
