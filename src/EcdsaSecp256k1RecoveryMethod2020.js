@@ -1,3 +1,4 @@
+'use strict';
 const base64url = require("base64url");
 const ES256KR = require("./ES256K-R");
 
@@ -170,7 +171,7 @@ function joseSignerFactory(vm) {
  * @returns {{verify: Function}} An async verifier specific
  * to the key passed in.
  */
-joseVerifierFactory = (vm) => {
+const joseVerifierFactory = (vm) => {
   if (
     vm.publicKeyJwk === undefined &&
     vm.publicKeyHex === undefined &&
