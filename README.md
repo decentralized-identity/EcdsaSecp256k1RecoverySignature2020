@@ -121,9 +121,7 @@ This suite uses detached JWS using alg "ES256K-R" an unregistered, experimental 
 
 ES256K-R is just ES256K with the recovery bit appended... making the signature 65 bytes instead of 64.
 
-The recovery bit is used to extract the public key from the signature. See [here](https://github.com/bitjson/bitcoin-ts/blob/90848d9/src/lib/crypto/secp256k1-types.ts#L220).
-
-^ please recommend a better source for describing ecdsa secp256k1 recoverable signature format.
+The recovery bit is appended to the signature to disambiguate between the possible public keys recovered from a given PKH and signature over a known digest. See [here](https://github.com/bitjson/bitcoin-ts/blob/90848d9/src/lib/crypto/secp256k1-types.ts#L220) for a canonical library that implements the secp256k1-specific logic for deriving and appending the recovery bit, and [section 4.1.6 in secg.org's Standards for Efficieny Cryptography 1 vol. 2](http://www.secg.org/sec1-v2.pdf) for a canonical specification of the ECDSA recovery algorithm more generally.
 
 The detached JWS must have the following header:
 
